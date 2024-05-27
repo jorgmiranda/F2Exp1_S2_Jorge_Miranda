@@ -3,6 +3,20 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
 }
 
 nav {
@@ -23,7 +37,7 @@ nav {
 .menu > li > a {
     display: block;
     padding: 15px 20px;
-    color: white;
+    color: white !important;
     text-decoration: none;
 }
 
@@ -37,7 +51,7 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #333;
+    background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -51,7 +65,7 @@ nav {
 
 .submenu ul li a {
     padding: 10px 20px;
-    color: white;
+    color: white !important;
     text-decoration: none;
     display: block;
 }
@@ -64,9 +78,25 @@ nav {
     display: block;
 }
 
-main {
-    padding: 20px;
+.card-img-top {
+    width: 300px;
+    height: 300px;
 }
+
+.card-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+/*Deberia eliminarse esta parte*/
 
 .image-container {
     display: flex;
@@ -102,7 +132,6 @@ main {
 .image-details p {
     margin: 5px 0;
 }
-
 /* Media Querys*/
 @media screen and (max-width: 768px) {
     .image-container {
